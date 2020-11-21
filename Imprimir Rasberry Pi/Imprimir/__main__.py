@@ -6,7 +6,6 @@ import time
 
 # ONEDRIVE
 
-# Opens a file
 def OpenFile(filename, Mode):
     f = open(filename, mode=Mode)
     return f
