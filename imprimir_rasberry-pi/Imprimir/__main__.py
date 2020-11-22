@@ -74,7 +74,6 @@ def FinalWork():
         latest_file = newest(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\imprimir_rasberry-pi\PARA-IMPRIMIR')
         time.sleep(2)
 
-
     elif check == 'Es mas grande':
         os.system('cls')
         n_files = n_files - 1
