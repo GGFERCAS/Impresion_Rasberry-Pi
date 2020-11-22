@@ -55,6 +55,9 @@ def newest(path):
     paths = [os.path.join(path, basename) for basename in files]
     return max(paths, key=os.path.getctime)
 
+def Pull_Usb(path):
+    pass
+
 def FinalWork():
     filecount = Filecount(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\imprimir_rasberry-pi\PARA-IMPRIMIR')
     reader_mode = OpenFile("n_files.txt", "r+")
