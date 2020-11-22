@@ -50,6 +50,11 @@ def Filecount(path):
 
     return filecount
 
+def newest(path):
+    files = os.listdir(path)
+    paths = [os.path.join(path, basename) for basename in files]
+    return max(paths, key=os.path.getctime)
+
 def FinalWork():
     filecount = Filecount(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\imprimir_rasberry-pi\PARA-IMPRIMIR')
     reader_mode = OpenFile("n_files.txt", "r+")
@@ -66,9 +71,9 @@ def FinalWork():
         formula_replacing = Replace_Numer(read_n_files, final_n_files, replacement)
         Write(formula_replacing, 'n_files.txt')
         check = Compare(read_n_files, filecount)
-        list_of_files = glob.glob(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\imprimir_rasberry-pi\PARA-IMPRIMIR\*') # * means all if need specific format then *.csv
-        latest_file = max(list_of_files, key=os.path.getctime)
-        print (latest_file)
+        latest_file = newest(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\imprimir_rasberry-pi\PARA-IMPRIMIR')
+        time.sleep(2)
+
 
     elif check == 'Es mas grande':
         os.system('cls')
@@ -81,6 +86,7 @@ def FinalWork():
         os.system('cls')
         print()
         print("Todo Correcto!") 
+        time.sleep(2)
 
 
 while True:
