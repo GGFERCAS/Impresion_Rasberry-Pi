@@ -59,7 +59,7 @@ def Pull_Usb(path):
     pass
 
 def FinalWork():
-    filecount = Filecount(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\imprimir_rasberry-pi\PARA-IMPRIMIR')
+    filecount = Filecount(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\PARA-IMPRIMIR')
     reader_mode = OpenFile("n_files.txt", "r+")
     values = Read_Values(reader_mode)
     read_n_files = values[0]
@@ -74,7 +74,7 @@ def FinalWork():
         formula_replacing = Replace_Numer(read_n_files, final_n_files, replacement)
         Write(formula_replacing, 'n_files.txt')
         check = Compare(read_n_files, filecount)
-        latest_file = newest(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\imprimir_rasberry-pi\PARA-IMPRIMIR')
+        latest_file = newest(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\PARA-IMPRIMIR')
         time.sleep(2)
 
     elif check == 'Es mas grande':
