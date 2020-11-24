@@ -3,9 +3,11 @@ import os
 import sys
 import fileinput
 import time
-
+import subprocess
+import pyautogui
 
 # ONEDRIVE
+
 
 def OpenFile(filename, Mode):
     f = open(filename, mode=Mode)
@@ -55,8 +57,10 @@ def newest(path):
     paths = [os.path.join(path, basename) for basename in files]
     return max(paths, key=os.path.getctime)
 
-def Pull_Usb(path):
-    pass
+def Pull_Usb(filepath):
+    if os.path.isfile(filepath):
+        os.startfile(filepath, "print")
+    return filepath
 
 def FinalWork():
     filecount = Filecount(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\PARA-IMPRIMIR')
@@ -75,7 +79,9 @@ def FinalWork():
         Write(formula_replacing, 'n_files.txt')
         check = Compare(read_n_files, filecount)
         latest_file = newest(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\PARA-IMPRIMIR')
-        time.sleep(2)
+        Pull_Usb(latest_file)
+        time.sleep(3)
+        pyautogui.typewrite(['enter'])
 
     elif check == 'Es mas grande':
         os.system('cls')
