@@ -80,7 +80,7 @@ def FinalWork():
         check = Compare(read_n_files, filecount)
         latest_file = newest(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\PARA-IMPRIMIR')
         Pull_Usb(latest_file)
-        time.sleep(3)
+        time.sleep(5)
         pyautogui.typewrite(['enter'])
 
     elif check == 'Es mas grande':
