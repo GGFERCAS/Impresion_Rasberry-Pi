@@ -22,7 +22,7 @@ def Read_Values(f):
 
     return read_n_files, replacement, n_files
 
-def Replace_Numer(read_n_files, final_n_files, replacement, ):
+def Replace_Number(read_n_files, final_n_files, replacement, ):
     os.system('cls')
     final_replaced_n_files = read_n_files.replace(replacement, final_n_files)
     return final_replaced_n_files
