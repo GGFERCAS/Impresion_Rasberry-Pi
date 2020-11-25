@@ -75,7 +75,7 @@ def FinalWork():
         os.system('cls')
         n_files = n_files + 1
         final_n_files = str(n_files)
-        formula_replacing = Replace_Numer(read_n_files, final_n_files, replacement)
+        formula_replacing = Replace_Number(read_n_files, final_n_files, replacement)
         Write(formula_replacing, 'n_files.txt')
         check = Compare(read_n_files, filecount)
         latest_file = newest(r'C:\Users\GGFERCAS13\Documents\GitHub\Impresion_Rasberry-Pi\PARA-IMPRIMIR')
